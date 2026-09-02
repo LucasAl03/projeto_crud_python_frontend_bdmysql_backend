@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS `bdpessoas`.`pessoa` (
   `idpessoa` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(60) NOT NULL,
   `sexo` CHAR(1) NOT NULL,
+  `cpf` INT NOT NULL,
   `datanascimento` DATE NOT NULL,
   `peso` INT NOT NULL,
   `altura` DECIMAL(10,2) NOT NULL,
