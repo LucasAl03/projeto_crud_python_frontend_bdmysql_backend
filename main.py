@@ -20,4 +20,6 @@ app.include_router(pessoa_router)
     uvicorn main:app --reload
 
     python -m  uvicorn main:app --reload
+
+    pip install fastapi uvicorn sqlalchemy pymysql pydantic
 """
