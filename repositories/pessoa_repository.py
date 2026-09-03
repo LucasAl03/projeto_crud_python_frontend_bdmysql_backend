@@ -38,12 +38,12 @@ class PessoaRepository:
 
         pessoa_bd.nome = pessoa.nome
         pessoa_bd.cpf = pessoa.cpf
-        pessoa_bd.dataNascimento = pessoa.dataNascimento
+        pessoa_bd.data_nascimento = pessoa.data_nascimento
         pessoa_bd.peso = pessoa.peso
         pessoa_bd.altura = pessoa.altura
         pessoa_bd.sexo = pessoa.sexo
         pessoa_bd.cep = pessoa.cep
-        pessoa_bd.ruaLogradouro = pessoa.ruaLogradouro
+        pessoa_bd.rua_logradouro = pessoa.rua_logradouro
         pessoa_bd.bairro = pessoa.bairro
         pessoa_bd.cidade = pessoa.cidade
         pessoa_bd.uf = pessoa.uf        
