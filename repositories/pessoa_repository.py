@@ -29,12 +29,12 @@ class PessoaRepository:
         return nova_pessoa
     
     #listar pessoa por id
-    def pessoa_id(self, db: Session, idpessoa: int):
-        return db.query(Pessoa).filter(Pessoa.idpessoa == idpessoa).first()
+    def pessoa_id(self, db: Session, id: int):
+        return db.query(Pessoa).filter(Pessoa.id == id).first()
     
     #alterar pessoa
-    def alterar (self, db: Session, idpessoa: int, pessoa):
-        pessoa_bd = self.pessoa_id(db, idpessoa)
+    def alterar (self, db: Session, id: int, pessoa):
+        pessoa_bd = self.pessoa_id(db, id)
 
         pessoa_bd.nome = pessoa.nome
         pessoa_bd.cpf = pessoa.cpf
@@ -54,8 +54,8 @@ class PessoaRepository:
         return pessoa_bd
     
     #excluir pessoa
-    def excluir (self, db: Session, idpessoa: int):
-       pessoa_bd = self.pessoa_id(db, idpessoa)
+    def excluir (self, db: Session, id: int):
+       pessoa_bd = self.pessoa_id(db, id)
        
        db.delete(pessoa_bd)
        db.commit()

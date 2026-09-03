@@ -24,7 +24,7 @@ USE `bdpessoas02` ;
 -- Table `bdpessoas02`.`pessoa`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bdpessoas02`.`pessoa` (
-  `idpessoa` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(60) NOT NULL,
   `cpf` VARCHAR(11) NOT NULL,
   `dataNascimento` VARCHAR(10) NOT NULL,
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `bdpessoas02`.`pessoa` (
   `bairro` VARCHAR(20) NOT NULL,
   `cidade` VARCHAR(70) NOT NULL,
   `uf` CHAR(2) NOT NULL,
-  PRIMARY KEY (`idpessoa`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB
 AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb3;

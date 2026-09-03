@@ -5,7 +5,7 @@ from database import Base
 class Pessoa(Base):
     __tablename__ = "pessoa"
     
-    idpessoa = Column(Integer, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True, index=True)
     nome = Column(String(60))
     cpf = Column(String(11))
     dataNascimento = Column(String)

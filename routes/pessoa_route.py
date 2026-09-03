@@ -26,34 +26,34 @@ def listar():
 
     return controller.listar(db)
 
-@router.get("/{idpessoa}")
-def listar_id(idpessoa: int):
+@router.get("/{id}")
+def listar_id(id: int):
     db = next(get_db())
 
-    return controller.listar_id(db, idpessoa)
+    return controller.listar_id(db, id)
 
 @router.post("/")
-def cadstrar(pessoa: PessoaSchema):
+def cadastrar(pessoa: PessoaSchema):
     db = next(get_db())
     return controller.cadastrar(db, pessoa)
 
-@router.put("/{idpessoa}")
-def alterar(idpessoa: int, pessoa: PessoaSchema):
+@router.put("/{id}")
+def alterar(id: int, pessoa: PessoaSchema):
 
     db = next(get_db())
 
     return controller.alterar(
         db,
-        idpessoa,
+        id,
         pessoa
     )
 
-@router.delete("/{idpessoa}")
-def excluir(idpessoa: int):
+@router.delete("/{id}")
+def excluir(id: int):
 
     db = next(get_db())
 
     return controller.excluir(
         db,
-        idpessoa
+        id
     )

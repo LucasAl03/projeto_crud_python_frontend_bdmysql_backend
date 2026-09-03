@@ -10,18 +10,18 @@ class PessoaService:
         return self.repo.listar(db)
 
     #serviço listar_id
-    def listar_id(self, db, idpessoa):
-        return self.repo.pessoa_id(db, idpessoa)
+    def listar_id(self, db, id):
+        return self.repo.pessoa_id(db, id)
     
     #serviço cadastrar
     def cadastar(self, db, pessoa):
         return self.repo.cadastar(db, pessoa)
 
     # serviço alterar
-    def alterar(self, db, idpessoa, pessoa):
-        return self.repo.alterar(db, idpessoa, pessoa)
+    def alterar(self, db, id, pessoa):
+        return self.repo.alterar(db, id, pessoa)
 
 
     # serviço excluir
-    def excluir(self, db, idpessoa):
-        return self.repo.excluir(db, idpessoa)
+    def excluir(self, db, id):
+        return self.repo.excluir(db, id)
