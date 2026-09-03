@@ -26,7 +26,7 @@ def listar():
 
     return controller.listar(db)
 
-@router.get("/${idAtleta}")
+@router.get("/{id}")
 def listar_id(id: int):
     db = next(get_db())
 
@@ -37,7 +37,7 @@ def cadastrar(pessoa: PessoaSchema):
     db = next(get_db())
     return controller.cadastrar(db, pessoa)
 
-@router.put("/${pessoa.id}")
+@router.put("/{id}")
 def alterar(id: int, pessoa: PessoaSchema):
 
     db = next(get_db())
@@ -48,7 +48,7 @@ def alterar(id: int, pessoa: PessoaSchema):
         pessoa
     )
 
-@router.delete("/${pessoa.id}")
+@router.delete("/{id}")
 def excluir(id: int):
 
     db = next(get_db())

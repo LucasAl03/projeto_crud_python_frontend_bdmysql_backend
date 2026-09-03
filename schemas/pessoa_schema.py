@@ -4,12 +4,12 @@ from datetime import date
 class PessoaSchema(BaseModel):
     nome : str
     cpf: str
-    dataNascimento: date
+    data_nascimento: date
     peso: float
     altura: float
     sexo : str
     cep : str
-    ruaLogradouro : str
+    rua_logradouro : str
     bairro : str
     cidade : str
     uf : str

@@ -11,12 +11,12 @@ class PessoaRepository:
         nova_pessoa = Pessoa(
             nome = pessoa.nome,
             cpf = pessoa.cpf,
-            dataNascimento = pessoa.dataNascimento,
+            data_nascimento = pessoa.data_nascimento,
             peso = pessoa.peso,
             altura = pessoa.altura,
             sexo = pessoa.sexo,
             cep = pessoa.cep,
-            ruaLogradouro = pessoa.ruaLogradouro,
+            rua_logradouro = pessoa.rua_logradouro,
             bairro = pessoa.bairro,
             cidade = pessoa.cidade,
             uf = pessoa.uf
