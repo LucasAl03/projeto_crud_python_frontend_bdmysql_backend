@@ -11,23 +11,23 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Schema mydb
 -- -----------------------------------------------------
 -- -----------------------------------------------------
--- Schema bdpessoas02
+-- Schema bdpessoas03
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema bdpessoas02
+-- Schema bdpessoas03
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `bdpessoas02` DEFAULT CHARACTER SET utf8mb3 ;
-USE `bdpessoas02` ;
+CREATE SCHEMA IF NOT EXISTS `bdpessoas03` DEFAULT CHARACTER SET utf8mb3 ;
+USE `bdpessoas03` ;
 
 -- -----------------------------------------------------
--- Table `bdpessoas02`.`pessoa`
+-- Table `bdpessoas03`.`pessoa`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `bdpessoas02`.`pessoa` (
+CREATE TABLE IF NOT EXISTS `bdpessoas03`.`pessoa` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(60) NOT NULL,
   `cpf` VARCHAR(11) NOT NULL,
-  `dataNascimento` VARCHAR(10) NOT NULL,
+  `dataNascimento` DATE NOT NULL,
   `peso` DECIMAL(10,2) NOT NULL,
   `altura` DECIMAL(10,2) NOT NULL,
   `sexo` CHAR(1) NOT NULL,

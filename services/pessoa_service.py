@@ -14,8 +14,8 @@ class PessoaService:
         return self.repo.pessoa_id(db, id)
     
     #serviço cadastrar
-    def cadastar(self, db, pessoa):
-        return self.repo.cadastar(db, pessoa)
+    def cadastrar(self, db, pessoa):
+        return self.repo.cadastrar(db, pessoa)
 
     # serviço alterar
     def alterar(self, db, id, pessoa):

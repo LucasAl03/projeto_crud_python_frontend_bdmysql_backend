@@ -14,8 +14,8 @@ class PessoaController:
         return self.servico.listar_id(db, id)
     
     #controle cadastrar
-    def cadastar(self, db, pessoa):
-        return self.servico.cadastar(db, pessoa)
+    def cadastrar(self, db, pessoa):
+        return self.servico.cadastrar(db, pessoa)
 
   # controller alterar pessoa
     def alterar(self, db, id, pessoa):

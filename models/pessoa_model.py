@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DECIMAL
+from sqlalchemy import Column, Integer, String, DECIMAL, DATE
 
 from database import Base
 
@@ -8,7 +8,7 @@ class Pessoa(Base):
     id = Column(Integer, primary_key=True, index=True)
     nome = Column(String(60))
     cpf = Column(String(11))
-    dataNascimento = Column(String)
+    dataNascimento = DATE
     peso = Column(DECIMAL(10,2))
     altura = Column(DECIMAL(10,2))
     sexo = Column(String(1))

@@ -7,7 +7,7 @@ class PessoaRepository:
         return db.query(Pessoa).all()
     
     #cadastra Pessoa
-    def cadastar(self, db: Session, pessoa):
+    def cadastrar(self, db: Session, pessoa):
         nova_pessoa = Pessoa(
             nome = pessoa.nome,
             cpf = pessoa.cpf,

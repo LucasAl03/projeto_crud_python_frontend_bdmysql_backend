@@ -4,7 +4,7 @@ from datetime import date
 class PessoaSchema(BaseModel):
     nome : str
     cpf: str
-    dataNascimento: str
+    dataNascimento: date
     peso: float
     altura: float
     sexo : str
