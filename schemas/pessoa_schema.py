@@ -3,13 +3,13 @@ from datetime import date
 
 class PessoaSchema(BaseModel):
     nome : str
-    cpf: int
-    data_nascimento: date
-    peso: int
+    cpf: str
+    dataNascimento: str
+    peso: float
     altura: float
     sexo : str
-    cep : int
-    rua_logradouro : str
+    cep : str
+    ruaLogradouro : str
     bairro : str
     cidade : str
     uf : str

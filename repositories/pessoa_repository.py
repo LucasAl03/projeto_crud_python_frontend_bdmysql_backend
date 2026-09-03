@@ -11,12 +11,12 @@ class PessoaRepository:
         nova_pessoa = Pessoa(
             nome = pessoa.nome,
             cpf = pessoa.cpf,
-            datanascimento = pessoa.data_nascimento,
+            dataNascimento = pessoa.dataNascimento,
             peso = pessoa.peso,
             altura = pessoa.altura,
             sexo = pessoa.sexo,
             cep = pessoa.cep,
-            rualogradouro = pessoa.rua_logradouro,
+            ruaLogradouro = pessoa.ruaLogradouro,
             bairro = pessoa.bairro,
             cidade = pessoa.cidade,
             uf = pessoa.uf
@@ -29,21 +29,21 @@ class PessoaRepository:
         return nova_pessoa
     
     #listar pessoa por id
-    def pessoa_id(self, db: Session, id: int):
-        return db.query(Pessoa).filter(Pessoa.id == id).first()
+    def pessoa_id(self, db: Session, idpessoa: int):
+        return db.query(Pessoa).filter(Pessoa.idpessoa == idpessoa).first()
     
     #alterar pessoa
-    def alterar (self, db: Session, id: int, pessoa):
-        pessoa_bd = self.pessoa_id(db, id)
+    def alterar (self, db: Session, idpessoa: int, pessoa):
+        pessoa_bd = self.pessoa_id(db, idpessoa)
 
         pessoa_bd.nome = pessoa.nome
         pessoa_bd.cpf = pessoa.cpf
-        pessoa_bd.datanascimento = pessoa.datanascimento
+        pessoa_bd.dataNascimento = pessoa.dataNascimento
         pessoa_bd.peso = pessoa.peso
         pessoa_bd.altura = pessoa.altura
         pessoa_bd.sexo = pessoa.sexo
         pessoa_bd.cep = pessoa.cep
-        pessoa_bd.rualogradouro = pessoa.rualogradouro
+        pessoa_bd.ruaLogradouro = pessoa.ruaLogradouro
         pessoa_bd.bairro = pessoa.bairro
         pessoa_bd.cidade = pessoa.cidade
         pessoa_bd.uf = pessoa.uf        
@@ -54,8 +54,8 @@ class PessoaRepository:
         return pessoa_bd
     
     #excluir pessoa
-    def excluir (self, db: Session, id: int):
-       pessoa_bd = self.pessoa_id(db, id)
+    def excluir (self, db: Session, idpessoa: int):
+       pessoa_bd = self.pessoa_id(db, idpessoa)
        
        db.delete(pessoa_bd)
        db.commit()
