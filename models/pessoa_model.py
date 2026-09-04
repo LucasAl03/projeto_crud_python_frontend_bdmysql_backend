@@ -12,6 +12,8 @@ class Pessoa(Base):
     peso = Column(DECIMAL(10,2))
     altura = Column(DECIMAL(10,2))
     sexo = Column(String(1))
+    idade = Column(Integer)
+    imc = Column(DECIMAL(10,2))
     cep = Column(String(9))
     rua_logradouro = Column(String(100))
     bairro = Column(String(20))

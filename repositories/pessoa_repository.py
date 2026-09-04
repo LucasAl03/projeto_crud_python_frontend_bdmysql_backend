@@ -15,6 +15,8 @@ class PessoaRepository:
             peso = pessoa.peso,
             altura = pessoa.altura,
             sexo = pessoa.sexo,
+            idade = pessoa.idade,
+            imc = pessoa.imc,
             cep = pessoa.cep,
             rua_logradouro = pessoa.rua_logradouro,
             bairro = pessoa.bairro,
@@ -42,6 +44,8 @@ class PessoaRepository:
         pessoa_bd.peso = pessoa.peso
         pessoa_bd.altura = pessoa.altura
         pessoa_bd.sexo = pessoa.sexo
+        pessoa_bd.idade = pessoa.idade
+        pessoa_bd.imc = pessoa.imc
         pessoa_bd.cep = pessoa.cep
         pessoa_bd.rua_logradouro = pessoa.rua_logradouro
         pessoa_bd.bairro = pessoa.bairro
