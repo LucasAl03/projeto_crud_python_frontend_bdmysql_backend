@@ -23,12 +23,12 @@ class CorridaRepository:
         return nova_corrida
     
     #listar corrida por id
-    def corrida_id(self, db: Session, id: int):
-        return db.query(Corrida).filter(Corrida.idcorrida == id).first()
+    def corrida_id(self, db: Session, idcorrida: int):
+        return db.query(Corrida).filter(Corrida.idcorrida == idcorrida).first()
     
     #alterar pessoa
-    def alterar (self, db: Session, id: int, corrida):
-        corrida_bd = self.corrida_id(db, id)
+    def alterar (self, db: Session, idcorrida: int, corrida):
+        corrida_bd = self.corrida_id(db, idcorrida)
 
         corrida_bd.descricao_corrida = corrida.descricao_corrida
         corrida_bd.data_corrida = corrida.data_corrida
@@ -42,8 +42,8 @@ class CorridaRepository:
         return corrida_bd
     
     #excluir pessoa
-    def excluir (self, db: Session, id: int):
-       corrida_bd = self.corrida_id(db, id)
+    def excluir (self, db: Session, idcorrida: int):
+       corrida_bd = self.corrida_id(db, idcorrida)
        
        db.delete(corrida_bd)
        db.commit()

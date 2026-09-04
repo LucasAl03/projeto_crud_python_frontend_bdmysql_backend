@@ -10,18 +10,18 @@ class CorridaController:
         return self.servico.listar(db)
 
     #controler listar_id
-    def listar_id(self, db, id):
-        return self.servico.listar_id(db, id)
+    def listar_id(self, db, idcorrida):
+        return self.servico.listar_id(db, idcorrida)
     
     #controle cadastrar
     def cadastrar(self, db, pessoa):
         return self.servico.cadastrar(db, pessoa)
 
   # controller alterar pessoa
-    def alterar(self, db, id, pessoa):
-        return self.servico.alterar(db, id, pessoa)
+    def alterar(self, db, idcorrida, pessoa):
+        return self.servico.alterar(db, idcorrida, pessoa)
 
 
     # controller excluir pessoa
-    def excluir(self, db, id):
-        return self.servico.excluir(db, id)
+    def excluir(self, db, idcorrida):
+        return self.servico.excluir(db, idcorrida)
