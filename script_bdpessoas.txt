@@ -50,11 +50,13 @@ CREATE TABLE IF NOT EXISTS `bdpessoas03`.`corrida` (
   `idcorrida` INT NOT NULL AUTO_INCREMENT,
   `descricao_corrida` TEXT(200) NOT NULL,
   `data_corrida` DATE NOT NULL,
-  `distancia_5km` CHAR(5) NOT NULL,
-  `distancia_10km` CHAR(5) NOT NULL,
-  `distancia_25km` CHAR(5) NOT NULL,
+  `distancia_5km` TINYINT(1) NOT NULL,
+  `distancia_10km` TINYINT(1) NOT NULL,
+  `distancia_25km` TINYINT(1) NOT NULL,
   PRIMARY KEY (`idcorrida`))
 ENGINE = InnoDB;
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8mb3;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
